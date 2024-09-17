@@ -6,104 +6,145 @@
     <title>Ahmed Abdelkarim CV</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
         }
-        .header {
-            background-color: #007bff;
-            color: white;
-            text-align: center;
-            padding: 20px 0;
-        }
         .container {
-            width: 80%;
+            display: flex;
+            max-width: 1200px;
             margin: 20px auto;
             background-color: white;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .left, .right {
             padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        h1, h2 {
-            text-align: center;
-            color: #007bff;
+        .left {
+            background-color: #007bff;
+            color: white;
+            width: 30%;
+            padding-top: 40px;
         }
-        p, ul {
-            line-height: 1.6;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li::before {
-            content: "• ";
-            color: #007bff;
+        .right {
+            width: 70%;
         }
         .profile-photo {
             display: block;
-            margin: 0 auto;
+            margin: 0 auto 20px auto;
             width: 150px;
             height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #007bff;
+            border: 5px solid white;
         }
-        .section-title {
-            color: #007bff;
-            border-bottom: 2px solid #007bff;
-            padding-bottom: 5px;
+        h1, h2 {
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
             margin-bottom: 10px;
+        }
+        h2 {
+            font-size: 16px;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+        .contact-info, .skills, .languages {
+            margin-bottom: 30px;
+        }
+        h3 {
+            font-size: 18px;
+            color: white;
+            margin-bottom: 10px;
+        }
+        .right h3 {
+            color: #007bff;
+        }
+        .contact-info p, .skills ul, .languages ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .skills ul li, .languages ul li {
+            margin-bottom: 10px;
+        }
+        .skills ul li::before, .languages ul li::before {
+            content: "• ";
+            color: #ffb400;
+            font-weight: bold;
+        }
+        .experience, .education {
+            margin-bottom: 30px;
+        }
+        .experience h4, .education h4 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .experience p, .education p {
+            margin: 0 0 20px 0;
         }
     </style>
 </head>
 <body>
-    <div class="header">
-        <h1>Ahmed Abdelkarim</h1>
-        <h2>Facharzt für Orthopädie und Traumatologie, Schwerpunkt Handchirurgie</h2>
-    </div>
-
     <div class="container">
-        <img src="1702326459403.jpg" alt="Profile Photo" class="profile-photo">
-        
-        <h3 class="section-title">Personal Information</h3>
-        <p>Location: Aschach an der Donau, Österreich</p>
-        <p>Email: <a href="mailto:a4karim@gmail.com">a4karim@gmail.com</a></p>
-        <p>Phone: +43 660 536 586 4</p>
-        <p>Birthdate: 19.05.1989</p>
-
-        <h3 class="section-title">Skills</h3>
-        <ul>
-            <li>Microsoft Office</li>
-            <li>Creativity</li>
-            <li>Communication skills</li>
-            <li>Time management</li>
-            <li>Teamwork</li>
-            <li>Fast learning</li>
-        </ul>
-
-        <h3 class="section-title">Languages</h3>
-        <ul>
-            <li>Arabic</li>
-            <li>German</li>
-            <li>English</li>
-            <li>Italian</li>
-        </ul>
-
-        <h3 class="section-title">Experience</h3>
-        <p><strong>Orthopaedic and Traumatology Specialist, Hand Surgery Focus</strong> - Klinikum Rohrbach</p>
-        <p>September 2018 - Present</p>
-        <ul>
-            <li>CTS operations</li>
-            <li>Ring band splitting</li>
-            <li>Ganglion excision</li>
-            <li>Dupuytren's contracture</li>
-            <li>Osteosynthesis of hand and wrist</li>
-            <li>Wound treatment, including tendon and nerve sutures</li>
-            <li>DIP arthrodesis</li>
-        </ul>
-
-        <!-- Add more sections such as education, certifications, etc. -->
+        <div class="left">
+            <img src="photo.jpg" alt="Profile Photo" class="profile-photo">
+            <div class="contact-info">
+                <h3>Contact Info</h3>
+                <p>Location: Aschach an der Donau, Österreich</p>
+                <p>Email: <a href="mailto:a4karim@gmail.com" style="color:white;">a4karim@gmail.com</a></p>
+                <p>Phone: +43 660 536 586 4</p>
+                <p>Birthdate: 19.05.1989</p>
+            </div>
+            <div class="skills">
+                <h3>Skills</h3>
+                <ul>
+                    <li>Microsoft Office</li>
+                    <li>Creativity</li>
+                    <li>Communication Skills</li>
+                    <li>Time Management</li>
+                    <li>Teamwork</li>
+                    <li>Fast Learning</li>
+                </ul>
+            </div>
+            <div class="languages">
+                <h3>Languages</h3>
+                <ul>
+                    <li>Arabic</li>
+                    <li>German</li>
+                    <li>English</li>
+                    <li>Italian</li>
+                </ul>
+            </div>
+        </div>
+        <div class="right">
+            <h1>Ahmed Abdelkarim</h1>
+            <h2>Facharzt für Orthopädie und Traumatologie, Schwerpunkt Handchirurgie</h2>
+            <div class="experience">
+                <h3>Experience</h3>
+                <h4>Orthopaedic and Traumatology Specialist, Klinikum Rohrbach</h4>
+                <p>September 2018 - Present</p>
+                <ul>
+                    <li>CTS operations</li>
+                    <li>Ring band splitting</li>
+                    <li>Ganglion excision</li>
+                    <li>Dupuytren's contracture</li>
+                    <li>Osteosynthesis of hand and wrist</li>
+                    <li>Wound treatment, including tendon and nerve sutures</li>
+                    <li>DIP arthrodesis</li>
+                </ul>
+            </div>
+            <div class="education">
+                <h3>Education</h3>
+                <h4>Medical University of Vienna</h4>
+                <p>Nostrifikation (2017)</p>
+                <h4>University of Cairo</h4>
+                <p>Bachelor of Medicine and Surgery (2012)</p>
+            </div>
+        </div>
     </div>
 </body>
 </html>
